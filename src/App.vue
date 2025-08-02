@@ -16,7 +16,7 @@ interface HeaderItem {
 }
 
 const tableHeaders = ref<HeaderItem[]>([
-  { key: 'name', label: '品項', width: 'w-[240px]' },
+  { key: 'name', label: '品項', width: 'w-[200px]' },
   { key: 'price', label: '價錢', width: 'w-[100px]' },
   { key: 'stock', label: '庫存', width: 'w-[100px]' },
   { key: 'description', label: '描述', width: 'w-[280px]' },
@@ -35,7 +35,7 @@ const menuList = ref<MenuItem[]>([
 ])
 
 const originalItem = ref<Partial<MenuItem> | null>(null)
-  
+
 // 編輯
 const handleEdit = (id: number) => {
   menuList.value.forEach(item => {
@@ -103,14 +103,14 @@ onMounted(() => {
     <!-- main -->
     <div class="p-8 flex flex-1 overflow-y-auto">
       <div class="py-6 px-8 border-(px solid gray-30) flex-1 rounded-3">
-        <div class="overflow-hidden rounded-t-3">
-          <table class="w-full table-fixed">
+        <div class="overflow-x-auto rounded-t-3">
+          <table class="min-w-full table-fixed">
             <colgroup>
-              <col class="w-280px" />
-              <col class="w-100px" />
-              <col class="w-100px" />
-              <col class="w-200px" />
               <col class="w-180px" />
+              <col class="w-80px" />
+              <col class="w-80px" />
+              <col class="w-230px" />
+              <col class="w-120px" />
             </colgroup>
 
             <thead class="bg-gray-20">
@@ -147,7 +147,7 @@ onMounted(() => {
 
                 <!-- 描述 -->
                 <td class="py-3 px-4 border-b-(px solid gray-30) align-middle">
-                  <p v-if="!i.isEdit" class="text-gray-60 text-center">{{ i.description }}</p>
+                  <p v-if="!i.isEdit" class="text-gray-60 text-center lh-5">{{ i.description }}</p>
                   <input v-else v-model="i.description"
                     class="w-full border-(px solid gray-30) text-4 rounded-1 px-3 py-2" />
                 </td>
