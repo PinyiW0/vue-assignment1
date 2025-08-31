@@ -23,7 +23,7 @@ const handleAddToCart = (product: Product) => {
   <div class="flex-1 min-w-0 lg:flex-2">
     <h2 class="text-2xl font-bold mb-6">商品列表</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div v-for="product in products" :key="product.id" class="bg-white rounded-lg shadow-md overflow-hidden h-fit">
+      <div v-for="product in products" :key="product.id" class="bg-white rounded-lg shadow-md overflow-hidden flex-1">
         <img :src="product.image" :alt="product.name" class="w-full h-150px object-cover">
         <div class="p-5">
           <h5 class="text-lg font-semibold mb-2">{{ product.name }}</h5>
