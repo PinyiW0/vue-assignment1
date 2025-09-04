@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/vue-assignment1/assets/drink-DHvCdBn0.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Vue Assignment</title>
+    <!-- GitHub Pages SPA 路由解決方案 -->
+    <script type="text/javascript">
+      // 單頁應用程式重新導向解決方案 (開發環境中不執行)
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script type="module" crossorigin src="/vue-assignment1/assets/index-CpAlGRSb.js"></script>
+    <link rel="stylesheet" crossorigin href="/vue-assignment1/assets/index-BK27XG9F.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
